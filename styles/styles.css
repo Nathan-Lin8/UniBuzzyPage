@@ -84,10 +84,11 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 64px;
 }
 
 .title-container h2 {
-  margin-top: 64px;
+  
   font-family: 'Caveat', cursive;
   font-size: 24px;
   margin: 0;
