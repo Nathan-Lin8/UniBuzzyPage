@@ -1,0 +1,294 @@
+/* Reset default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: none;
+}
+
+/* Container for the page layout */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 0;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  z-index: 900;
+  border-right: 1px solid #ddd; /* Optional top border for separation */
+}
+
+.close-btn {
+  display: none; /* Hidden on desktop */
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it stays above other elements */
+}
+
+/* Blurred background effect */
+.blur {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+.title-container {
+  background-color: #FEFF9C;
+  position: relative;
+  height: 180px;
+  width: 250px;
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: center; /* Aligns items horizontally */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.title-overlay {
+  width: 100%;
+  height: 30px; /* Adjusted height to fit better */
+  background-color: #F5F56B;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title-container h2 {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+
+
+/* Nav links styling */
+.nav-links {
+  margin-top: 20px;
+  padding: 10;
+}
+
+.nav-links li {
+  margin: 10px 0;
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: gray;
+}
+
+/* Content section styling */
+.content {
+  flex-grow: 1;
+  margin-left: 350px;
+  padding: 40px 60px; /* Increased left and right padding */
+  overflow-y: auto;
+}
+
+.content section {
+  margin-bottom: 50px;
+}
+
+/* Section titles with Permanent Marker font */
+.content h1 {
+  font-family: 'Permanent Marker', cursive;
+  margin-top: 0;
+}
+
+/* Paragraphs using Open Sans */
+.content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Add this to your existing CSS */
+.mockup-image {
+  display: block;
+  margin: 0 auto 20px; /* Centers the image and adds space below */
+  max-width: 45%; /* Ensures the image scales with the content */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.back-to-whiteboard {
+  margin-top: auto; /* Pushes the link to the bottom of the sidebar */
+  padding: 20px;
+  width: 100%; 
+  background-color: white;
+}
+
+.back-to-whiteboard a {
+  font-family: 'Caveat', cursive;
+  color: black;
+  text-decoration: none; /* Removes underline */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns text and icon to the left */
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.back-to-whiteboard a:visited {
+  color: black; /* Ensure visited links remain black */
+}
+
+.back-to-whiteboard a:hover {
+  color: gray;
+}
+
+.chevron {
+  font-size: 24px;
+  margin-right: 8px; /* Space between chevron and text */
+}
+
+/* Ensure the sidebar is always visible on desktop */
+@media (min-width: 481px) {
+  .sidebar {
+    transform: translateX(0); /* Ensure it's visible */
+  }
+}
+
+/* Close button for mobile */
+.close-btn {
+  display: none;
+  align-self: flex-end;
+  margin: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Content section styling */
+.content {
+  flex-grow: 1;
+  padding: 40px 20px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 500;
+}
+
+/* Content section styling for text alignment */
+.content section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* Maintain image alignment */
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mockup-image {
+  max-width: 45%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Section Titles with Permanent Marker font */
+.content h1 {
+  font-family: 'Permanent Marker', cursive;
+  margin-top: 0;
+  font-size: 32px;
+}
+
+/* Paragraphs using Open Sans */
+.content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%); /* Hide sidebar initially */
+    border-right: none;
+    overflow-x: hidden;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
+  .content {
+    padding: 40px 16px;
+    margin-left: 24px;
+  }
+
+  .content section {
+    align-items: flex-start;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .title-container {
+    background-color: #FEFF9C;
+    position: relative;
+    height: 150px;
+    width: 200px; /* Fixed width */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 60px; /* Optional: Add some spacing from the top */
+  }
+
+  .title-container h2{
+    margin-top: 20px;
+  }
+  
+}

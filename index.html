@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/NL.png" type="image/png">
+  <link rel="shortcut icon" href="assets/NL.png" type="image/png">
+  <title>UniBuzzy</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Hamburger icon (only visible on mobile) -->
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+      <div class="title-container">
+        <div class="title-overlay">
+          <h2>UniBuzzy</h2>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#development">Development</a></li>
+        <li><a href="#improvements">Future Improvements</a></li>
+      </ul>
+    
+      <!-- Back to the Whiteboard link -->
+      <div class="back-to-whiteboard">
+        <a href="https://nathan-lin.com/" target="_self">
+          <span class="chevron">&#8249;</span> Back to the Whiteboard
+        </a>
+      </div>
+
+      <!-- Close Button (only visible on mobile) -->
+      <div class="close-btn" id="closeBtn">✕</div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="overview">
+        <h1>Project Overview</h1>
+        <div class="image-container">
+          <img src="https://nathan-lin8.github.io/UniBuzzyPage/assets/UniBuzzy.png" alt="UniBuzzy" class="mockup-image"/>
+        </div>
+        <p> As the primary intern on this project, I navigated the development of the web application from start to finish, 
+          working closely with occupational therapists to ensure the design aligned with their needs. The application provides 
+          a platform for therapists to analyze data from sensors placed within the SmartSeat, helping them monitor patient movements
+           and assess the physical health of older adults in real-time. </p> 
+        <p> I managed every stage of the process—from the initial design discussions to implementing the frontend interface. 
+          Additionally, I built and integrated backend API endpoints, enabling seamless data storage and retrieval in collaboration with InfluxDB. 
+          This system allows for smooth communication between the dashboard and the backend, ensuring data can be created, read, updated, 
+          and deleted (CRUD) effectively. </p> 
+        <p> Throughout the project, I worked independently, taking ownership of both the frontend and backend tasks. My role involved 
+          coordinating the technical aspects and ensuring that the dashboard met the expectation of the end users (occupational therapists). </p>
+        <p><strong>Role: </strong>Full-Stack Developement Reasearch Intern</p>
+        <p><strong>Time Frame: </strong>May 2024 - Present</p>
+        <p><strong>Tech Stack/Skills: </strong>ReactJS, Flask, Python, InfluxDB, HomeAssistant, Firebase, Grafana, Figma</p>
+      </section>
+
+      <section id="features">
+        <h1>Features</h1>
+        <p> The project uses a login-based system powered by <strong>Firebase</strong>, allowing occupational therapists to securely access the dashboard. 
+          Each participant within the system is assigned <strong>unique IDs</strong> linked to key elements: Home, Seats, and Studies. This structure provides 
+          a comprehensive framework for therapists to create, update, delete, and manage participants, seats, and related studies directly 
+          from the application, with all data stored and synchronized in InfluxDB for long-term access and analysis. </p> 
+          <p> The dashboard also includes a data visualization component to display time-series data from sensors installed in each SmartSeat. 
+            Therapists can view trends related to movement, <strong>activity levels,</strong> and other metrics over time. Additionally, the system is
+             designed to monitor the health status of each seat, such as <strong>battery levels</strong> and data reports. While real-time <strong>synchronization</strong>
+             with seat sensors is still under development, temporary data has been integrated to simulate these features, ensuring the 
+             interface is functional for future live synchronization.
+             </p>
+      </section>
+
+      <section id="development">
+        <h1>Development</h1>
+        <p> When I was introduced to the concept at the start of the internship, I began by creating <strong>wireframes</strong> and a 
+          <strong>low-fidelity prototype</strong> of the dashboard. This was essential for facilitating conversations with the 
+          end users occupational therapists to understand their needs, explore potential features, and define the <strong>end goal</strong> 
+          of the project. Since this is a <strong>research-focused program</strong>, the initial design was not set in stone. We 
+          adopted an <strong>iterative process</strong>, refining the dashboard design through continuous feedback and experimentation 
+          to ensure it aligned with the therapists' expectations. </p> 
+          <p> Following the design phase, I independently took on the development of the dashboard’s <strong>frontend components</strong> and 
+            features to bring the app to life. During this phase, I collaborated with stakeholders to gather examples and insights on how we
+            wanted to <strong>visualize</strong> the data effectively. This feedback guided the creation of interactive and meaningful 
+            visual components for the dashboard while keeping reactivity across all screen types. </p> 
+            <p> On the backend, I developed the Flask API to manage the <strong>CRUD operations</strong> for key elements such as 
+              Home, Participant, Seat, and Study IDs. These operations ensured seamless communication between the dashboard and InfluxDB, 
+              where all relevant data is stored and accessed. </p> 
+              <p> Currently, I am working on graphing and visualizing data using historical trial data stored in InfluxDB. These 
+                visualizations are being integrated with Grafana to embed interactive graphs into the dashboard, allowing users to
+                 analyze seat performance, movement patterns, and health metrics. The goal is to prepare the system for
+                  live synchronization with the sensors, ensuring the dashboard reflects real-time data and insights once the 
+                  integration is complete. </p>      </section>
+
+      <section id="improvements">
+        <h1>Future Improvements</h1>
+        <p> The next phase of the project involves <strong>optimizing</strong> the embeded graphs and visualizations displayed on the dashboard.
+          We are currently using previously collected trial data from the database to ensure the visual elements are clear, informative, 
+          and user-friendly. This step is crucial to provide actionable insights for occupational therapists as they monitor patient 
+          progress and seat performance. </p> 
+         <p> Once the studies go live, the system will transition to synchronizing real-time data from the deployed seats. This will
+            ensure the dashboard reflects the most up-to-date information on sensor readings, battery levels, and patient movement. 
+            We aim to maintain an ongoing dialogue with occupational therapists throughout this phase to ensure the data integration 
+            meets their needs. </p> 
+         <p> Additionally, I will assist therapists with onboarding and setup to ensure they can effectively use the system. This continuous 
+           support will help address any challenges they encounter and allow us to gather feedback for further refinement and improvements as 
+           the project evolves. </p>
+           <p>Learn more about the project <a href="https://sites.gatech.edu/awarehome/smartbathroom/" target="_blank">here</a>.</p>
+          </section>
+
+    </main>
+  </div>
+
+  <script>
+
+    // Smooth scrolling functionality for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const closeBtn = document.getElementById('closeBtn');
+const content = document.querySelector('.content');
+
+// Show sidebar and blur content when hamburger icon is clicked (mobile only)
+hamburger.addEventListener('click', () => {
+  sidebar.style.transform = 'translateX(0)';
+  content.classList.add('blur');
+});
+
+// Close sidebar and remove blur when 'X' button is clicked (mobile only)
+closeBtn.addEventListener('click', () => {
+  sidebar.style.transform = 'translateX(-100%)';
+  content.classList.remove('blur');
+});
+
+// Ensure sidebar is visible on desktop when resizing the window
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 480) {
+    sidebar.style.transform = 'translateX(0)';
+    content.classList.remove('blur'); // Remove blur on desktop
+  }
+});
+
+  </script>
+</body>
+</html>
