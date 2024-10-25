@@ -87,6 +87,7 @@ body, html {
 }
 
 .title-container h2 {
+  margin-top: 64px;
   font-family: 'Caveat', cursive;
   font-size: 24px;
   margin: 0;
