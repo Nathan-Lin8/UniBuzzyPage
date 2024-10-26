@@ -285,9 +285,7 @@ body, html {
   }
 
   .title-container {
-    width: 80%; /* Make the note responsive */
-    height: auto; /* Allow the height to adjust */
-    max-width: 300px; /* Prevent it from getting too large */
+    max-width: 200px; /* Prevent it from getting too large */
   }
 
   .title-text {
