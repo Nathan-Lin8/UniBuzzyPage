@@ -285,19 +285,17 @@ body, html {
   }
 
   .title-container {
-    background-color: #FEFF9C;
-    position: relative;
-    height: 150px;
-    width: 200px; /* Fixed width */
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 60px; /* Optional: Add some spacing from the top */
+    width: 80%; /* Make the note responsive */
+    height: auto; /* Allow the height to adjust */
+    max-width: 300px; /* Prevent it from getting too large */
   }
 
-  .title-container h2{
-    margin-top: 20px;
+  .title-text {
+    font-size: 22px; /* Slightly smaller font for mobile */
+  }
+
+  .sidebar {
+    padding: 10px; /* Add padding to avoid edge overflow */
   }
   
 }
